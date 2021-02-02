@@ -26,8 +26,9 @@ function recursiveCache(rec, id, i = 0) {
 }
 function safeCopyAndCache(rec, edid) {
 	rec = copyToPatch(rec, true);
-	SetValue(rec, 'EDID', edid);
+	AddElementValue(rec, 'EDID', edid);
 	recursiveCache(rec, uniqueRecId(rec));
+	SetValue(rec, 'EDID', edid);//cache record changes edid to be the cache id. this is bad.
 	return rec;
 }
 
