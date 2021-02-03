@@ -35,7 +35,8 @@ const {
 		SetFormID,
 		SetIntValue,
 		SetLinksTo,
-		SetValue
+		SetValue,
+		Signature
 	} = xelib,
 	{
 		addProgress,
